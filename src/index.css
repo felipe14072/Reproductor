@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Englebert&display=swap');
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-color: #111;
+  color: rgb(239, 139, 226);
+  background: url("/fondo.gif") center / cover no-repeat fixed;
+  font-family: "Chewy", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.reproductor {
+  width: min(100%, 390px);
+  max-height: 100vh;
+  text-align: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(128, 128, 128, 0.15);
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.portada {
+  width: 100%;
+
+  max-height: 55vh;
+
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.portada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.informacion {
+  margin-top: 20px;
+}
+
+.informacion h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.informacion p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.progreso {
+  width: 100%;
+  height: 5px;
+  margin-top: 30px;
+
+  background: #555;
+  border-radius: 10px;
+
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.barra {
+  width: 30%;
+  height: 100%;
+
+  background: rgb(224, 123, 231);
+  border-radius: 10px;
+}
+
+.progreso {
+  width: 100%;
+  height: 5px;
+  margin-top: 30px;
+  background: #555;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.progreso {
+  width: 100%;
+  height: 5px;
+  margin-top: 30px;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+
+  overflow: visible;
+}
+
+.barra {
+  position: relative;
+
+  width: 0%;
+  height: 100%;
+
+  background: rgb(234, 118, 216);
+  border-radius: 10px;
+
+  transition: width 0.1s linear;
+}
+
+.indicador {
+  position: absolute;
+
+  right: -5px;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background: white;
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.boton-control {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.boton-play {
+  width: 65px;
+  height: 65px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgb(243, 144, 221);
+  color: #111;
+
+  font-size: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.boton-control:active,
+.boton-play:active {
+  transform: scale(0.92);
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 10px;
+  }
+
+  .reproductor {
+    padding: 15px;
+  }
+
+  .portada {
+    max-height: 50vh;
+  }
+
+  .informacion {
+    margin-top: 12px;
+  }
+
+  .informacion h1 {
+    font-size: 21px;
+  }
+
+  .informacion p {
+    font-size: 14px;
+  }
+
+  .progreso {
+    margin-top: 20px;
+  }
+
+  .controles {
+    margin-top: 20px;
+  }
+}
