@@ -32,7 +32,7 @@ function App() {
 
       <section className="portada">
         <img
-          src="/imgen.jpeg"
+          src={`${import.meta.env.BASE_URL}imgen.jpeg`}
           alt="Portada de la canción"
         />
       </section>
@@ -72,7 +72,7 @@ function App() {
 
       <audio
         ref={audioRef}
-        src="/cancion.mp3"
+        src={`${import.meta.env.BASE_URL}cancion.mp3`}
         onTimeUpdate={actualizarProgreso}
       />
 
