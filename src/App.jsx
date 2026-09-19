@@ -32,7 +32,7 @@ function App() {
 
       <section className="portada">
         <img
-          src={`${import.meta.env.BASE_URL}imgen.jpeg`}
+          src={`${import.meta.env.BASE_URL}imgen2.jpeg`}
           alt="Portada de la canción"
         />
       </section>
